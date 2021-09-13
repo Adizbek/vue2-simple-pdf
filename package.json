@@ -1,18 +1,43 @@
 {
-  "name": "test-pdf-vue",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue2-simple-pdf",
+  "version": "1.0.0",
+
+  "author": {
+    "name": "Adizbek Ergashev",
+    "email": "adizbek1998@gmail.com",
+    "url": "https://github.com/adizbek/"
+  },
+
+  "private": false,
+
+  "main": "dist/vue-simple-pdf.umd.js",
+  "module": "dist/vue-simple-pdf.esm.js",
+  "unpkg": "dist/vue-simple-pdf.min.js",
+  "browser": {
+    "./sfc": "src/components/SimplePdfViewer.vue"
+  },
+
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "cross-env NODE_ENV=production rollup --config src/rollup.config.js --format umd --file dist/vue-simple-pdf.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config src/rollup.config.js --format es --file dist/vue-simple-pdf.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config src/rollup.config.js --format iife --file dist/vue-simple-pdf.min.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "pdfjs-dist": "2.0.943",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "cross-env": "^7.0.3",
+    "rollup": "2.56.3",
+    "rollup-plugin-vue": "^5.0.1",
     "vue-template-compiler": "^2.6.11"
   }
 }
