@@ -1,6 +1,6 @@
 {
   "name": "vue2-simple-pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
   "author": {
     "name": "Adizbek Ergashev",
@@ -8,6 +8,7 @@
     "url": "https://github.com/adizbek/"
   },
 
+  "homepage": "https://github.com/Adizbek/vue2-simple-pdf",
   "private": false,
 
   "main": "dist/vue-simple-pdf.umd.js",

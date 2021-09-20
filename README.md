@@ -1,19 +1,9 @@
-# test-pdf-vue
+# Vue2-simple-pdf
 
-## Project setup
-```
-yarn install
-```
+Simple pdf viewer without any control buttons
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+```vue
+<simple-pdf-viewer pdf-url="/instruction.pdf" />
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Screenshot](public/screen1.jpg)
